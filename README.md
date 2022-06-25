@@ -99,7 +99,7 @@ NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.100.0.1    <none>        443/TCP   31h
 vpodobaika   ClusterIP   10.100.49.2   <none>        80/TCP    17m
 
-$ kubectl port-forward service/vpodobaika 4444:8030
+$ kubectl port-forward service/vpodobaika 4444:80
 Forwarding from 127.0.0.1:4444 -> 8030
 Forwarding from [::1]:4444 -> 8030
 ```
