@@ -30,7 +30,7 @@ python3 code/vpodobaika.py --port 3333 --address 0.0.0.0 --processes 2 --debug=t
 Vpodobaika is very easy to install and deploy in a Docker container.
 
 We have regular automatic builds for this application and you can find up to date and ready to use docker image 
-> [Our docker repository](https://hub.docker.com/repository/docker/bakan/vpodobaika) 
+> [Our docker repository](https://hub.docker.com/r/bakan/vpodobaika) 
 
 or build it by yourself - it's very easy
 
