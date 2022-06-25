@@ -3,7 +3,12 @@
 
 ![Build Status](https://github.com/victorbakan/vpodobaika/actions/workflows/vpodobaika-main.yaml/badge.svg)
 
-Vpodobaika is a simple 1-2 route web server to get mock data, and is ok for training porposes for docker image build and deploy
+Vpodobaika is a simple 1-2 route web server to get mock data, and is ok for training purposes for docker image build and deploy
+It has only 2 HTTP routes that work in web browser: 
+> / # have on the page hyper link that leads to /companies
+
+> /companies # retuns some mock json value
+
 
 ## Installation and Start (without docker)
 
