@@ -67,12 +67,13 @@ your preferred browser.
 http://127.0.0.1:8030/
 ```
 #### Dgoss - simple test for development
-In this repository there is goss.yaml file to test if required application file is available and if python service is running. Start docker container and run the following to check if everything is ok inside container 
+In this repository there is `goss.yaml` file for dgoss console tool to test if application executable file is available inside docker and if indeed python service is running. Start docker container and run the following command to check if everything is ok inside container or integrate this one to your daily CI. 
 
 > Install dgoss on your local machine
 ```curl -fsSL https://goss.rocks/install | sh```
 
 ```sh
+cd vpodobaika
 dgoss run ${your-vpodobaika-container-name}
 ```
 
@@ -80,11 +81,30 @@ dgoss run ${your-vpodobaika-container-name}
 
 There is Helm chart in helm directory. This is ready for use helm chart for kubernetes with all defaults to launch Vpodobaika application
 
-Instruction will be soon
-Example
+> Further processing means that you already have kubertnete cluster, installed helm tool 
+
+Example (change all neccesary versions):
 ```sh
-helm install --name vpodobaika -f values.yaml vpodobaika-${CHART-VERAION}.tgz
+helm install vpodobaika -f values.yaml --set image.tag=1.0.9 vpodobaika-1.0.0.tgz
+# or install just from repo folder
+cd vpodobaika
+helm install vpodobaika helm/vpodobaika/ -f values.yaml --set image.tag=1.0.9
+# then check deployment and release
+helm list
 ```
+Than you shoud access this service locally for example by http://127.0.0.1:4444/ doing port-forwarding
+```sh
+$ kubectl get svc
+NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.100.0.1    <none>        443/TCP   31h
+vpodobaika   ClusterIP   10.100.49.2   <none>        80/TCP    17m
+
+$ kubectl port-forward service/vpodobaika 4444:8030
+Forwarding from 127.0.0.1:4444 -> 8030
+Forwarding from [::1]:4444 -> 8030
+```
+
+
 
 
 ## License
