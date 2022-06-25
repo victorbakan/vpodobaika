@@ -1,6 +1,8 @@
 # Vpodobaika
 ## _The Simple Flask web server, Ever_
 
+![Build Status](https://github.com/victorbakan/vpodobaika/actions/workflows/vpodobaika-main.yaml/badge.svg)
+
 Vpodobaika is a simple 1-2 route web server to get mock data, and is ok for training porposes for docker image build and deploy
 
 ## Installation and Start (without docker)
@@ -64,6 +66,12 @@ In this repository there is goss.yaml file to test if required application file 
 ```sh
 dgoss run ${your-vpodobaika-container-name}
 ```
+
+## Helm 
+
+There is Helm chart in helm directory. This is ready for use helm chart for kubernetes with all defaults to launch Vpodobaika application
+
+Instruction will be soon
 
 
 
