@@ -1,0 +1,13 @@
+process:
+  python3.7:
+    running: true
+
+file:
+  /app/vpodobaika.py:
+    exists: true
+    mode: "0644"
+    size: 2629
+    owner: root
+    group: root
+    filetype: file
+    contains: []
