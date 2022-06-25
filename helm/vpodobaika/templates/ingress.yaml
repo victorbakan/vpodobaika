@@ -16,6 +16,9 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
+  {{- if .Release.Namespace }}
+  namespace: {{ .Release.Namespace }}
+  {{- end }}
   labels:
     {{- include "vpodobaika.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}

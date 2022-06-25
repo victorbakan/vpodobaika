@@ -53,6 +53,7 @@ parser.add_argument('--debug',
 
 args = parser.parse_args()
 
+k8sConfigMapTest = os.environ.get('K8S_CONF_TEST', 'False')
 
 
 api = Flask("DevOpsRocketTask")
@@ -61,7 +62,7 @@ api = Flask("DevOpsRocketTask")
 @api.route('/')
 def index():
     try:
-      return "This is index <a href=/companies>Check Companies</a>"
+      return "This is index <a href=/companies>Check Companies</a><br><br>K8S_CONF_TEST = "+k8sConfigMap
     except Exception as e:
       return "Error on index page"
 
