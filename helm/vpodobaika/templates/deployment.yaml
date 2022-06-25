@@ -37,8 +37,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
-           - configMapRef:
-             name: {{ include "vpodobaika.fullname" . }}
+            - configMapRef:
+                name: {{ include "vpodobaika.fullname" . }}
           ports:
             - name: http
               containerPort: {{ .Values.containerPort }}
