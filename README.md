@@ -27,8 +27,12 @@ python3 code/vpodobaika.py --port 3333 --address 0.0.0.0 --processes 2 --debug=t
 ```
 
 ## Docker
-
 Vpodobaika is very easy to install and deploy in a Docker container.
+
+We have regular automatic builds for this application and you can find up to date and ready to use docker image 
+> [Our docker repository](https://hub.docker.com/repository/docker/bakan/vpodobaika) 
+
+or build it by yourself - it's very easy
 
 By default, the Docker will expose port 8030, so change this within the
 Dockerfile if necessary. When ready, simply use the Dockerfile to
@@ -60,7 +64,7 @@ Verify the deployment by navigating to your server address in
 your preferred browser.
 
 ```sh
-http://127.0.0.1:8030
+http://127.0.0.1:8030/
 ```
 #### Dgoss - simple test for development
 In this repository there is goss.yaml file to test if required application file is available and if python service is running. Start docker container and run the following to check if everything is ok inside container 
