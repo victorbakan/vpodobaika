@@ -62,7 +62,7 @@ api = Flask("DevOpsRocketTask")
 @api.route('/')
 def index():
     try:
-      return "This is index <a href=/companies>Check Companies</a><br><br>K8S_CONF_TEST = "+k8sConfigMap
+      return "This is index <a href=/companies>Check Companies</a><br><br>K8S_CONF_TEST = "+k8sConfigMapTest
     except Exception as e:
       return "Error on index page"
 
