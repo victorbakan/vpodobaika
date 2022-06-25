@@ -72,7 +72,10 @@ dgoss run ${your-vpodobaika-container-name}
 There is Helm chart in helm directory. This is ready for use helm chart for kubernetes with all defaults to launch Vpodobaika application
 
 Instruction will be soon
-
+Example
+```sh
+helm install --name vpodobaika -f values.yaml vpodobaika-${CHART-VERAION}.tgz
+```
 
 
 ## License
