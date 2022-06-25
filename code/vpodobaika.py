@@ -89,7 +89,7 @@ if __name__ == '__main__':
 
   logger = logging.getLogger()
 
-
   logger.info(f' * Starting app, Debug mode = {args.debug}')
+
   api.run(args.address, args.port, processes=args.processes, threaded=args.threaded, debug=args.debug)
 

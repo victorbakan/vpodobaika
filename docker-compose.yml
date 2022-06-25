@@ -1,0 +1,10 @@
+version: '3'
+services:
+ vpodobaika:
+   build: .
+   ports:
+    - "8030:8030"
+#   environment:
+#     - APP_ENV=${APP_ENV}
+#   depends_on:
+#     - migration
