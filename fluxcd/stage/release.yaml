@@ -4,7 +4,7 @@ metadata:
   name: vpodobaika
   namespace: vpodobaika
 spec:
-  interval: 5m
+  interval: 1m
   chart:
     spec:
       chart: vpodobaika
@@ -15,6 +15,7 @@ spec:
       interval: 1m
   values:
     image:
+      pullPolicy: Always
       tag: latest
     ingress:
       enabled: true
