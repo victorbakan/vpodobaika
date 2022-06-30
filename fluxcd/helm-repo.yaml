@@ -1,0 +1,8 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: vpodobaika
+  namespace: vpodobaika
+spec:
+  url: https://nexus.adpartner.pro/repository/mimi
+  interval: 10m

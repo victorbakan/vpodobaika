@@ -1,0 +1,35 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: vpodobaika
+  namespace: vpodobaika
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: vpodobaika
+      sourceRef:
+        kind: HelmRepository
+        name: vpodobaika
+        namespace: vpodobaika
+      interval: 1m
+  values:
+    image:
+      tag: 1.0.17
+    ingress:
+      enabled: true
+      className: "nginx"
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt
+        # kubernetes.io/ingress.class: nginx
+        # kubernetes.io/tls-acme: "true"
+      hosts:
+        - host: vpodobaika.techiia.space
+          paths:
+            - path: /
+              pathType: Prefix
+      tls:
+        - secretName: vpodobaika-techiia-space-tls
+          hosts:
+            - vpodobaika.techiia.space
+
