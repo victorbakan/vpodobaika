@@ -4,5 +4,5 @@ metadata:
   name: vpodobaika
   namespace: vpodobaika
 spec:
-  url: https://nexus.adpartner.pro/repository/mimi
-  interval: 10m
+  url: https://nexus-pub.adpartner.pro/repository/mimi
+  interval: 2m
